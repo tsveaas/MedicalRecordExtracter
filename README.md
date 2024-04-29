@@ -1,7 +1,7 @@
 # MedicalRecordExtracter
 Function created to extract patient medical recordings from raw medical text and present them as a list of dictionaries with format  {"parameter":, "value":, "unit":}
 
-ANALYSIS STEPS:
+**ANALYSIS STEPS:**
 
 - Load in samples, analyze text structure
 - Prioritise new samples as more relevant format
@@ -9,7 +9,7 @@ ANALYSIS STEPS:
 
 
 
-FUNCTION STEPS:
+**FUNCTION STEPS:**
 
 Cleaning and formatting raw medical text:
 - Recordings appear to always be on its own line with only one parameter per line, so will convert raw text to a list of lines
@@ -47,12 +47,12 @@ Output:
 - Only add the recording if the parameter hasn't been recorded already
 
 
-DETECTED ISSUES:
+**DETECTED ISSUES:**
 
 - Both C02 and HCO3 have the synonym bicarbonate in X1.json (likely shouldn't be a synonym for CO2)
 
 
-LIMITATIONS / FUTURE CONSIDERATIONS:
+**LIMITATIONS / FUTURE CONSIDERATIONS:**
  
 - Trade-off to consider when matching via fuzz ratio of getting strictly correct information vs more, possibly less accurate information	 
 - Perhaps have to consider other unit formattings in addition to only those containing (/ and %) i.e for the unit being time
