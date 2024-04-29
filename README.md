@@ -4,7 +4,7 @@ Function created to extract patient medical recordings from raw medical text and
 **ANALYSIS STEPS:**
 
 - Load in samples, analyze text structure
-- Prioritise new samples as more relevant format
+- Prioritise new samples as they will be a more relevant format
 - Load X1.json and analyze structure for parameter abbreviations and synonyms
 
 
@@ -12,7 +12,7 @@ Function created to extract patient medical recordings from raw medical text and
 **FUNCTION STEPS:**
 
 Cleaning and formatting raw medical text:
-- Recordings appear to always be on its own line with only one parameter per line, so will convert raw text to a list of lines
+- Recordings appear to always be on their own line with only one parameter per line, so will convert raw text to a list of lines
 - Make all lowercase to allow string matching 
 - Remove unwanted information and then lines that won't have any recordings on. 
 	- Remove numbers from within brackets as they just indicate acceptable levels
@@ -50,6 +50,11 @@ Output:
 **DETECTED ISSUES:**
 
 - Both C02 and HCO3 have the synonym bicarbonate in X1.json (likely shouldn't be a synonym for CO2)
+
+
+**CONCLUSIONS:**
+- Created function successfully extracts raw medical data and classifies them into a list of dictionaries
+- Function achieves accuracy values of over 95% when used on sample texts
 
 
 **LIMITATIONS / FUTURE CONSIDERATIONS:**
