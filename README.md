@@ -61,3 +61,4 @@ Output:
  
 - Trade-off to consider when matching via fuzz ratio of getting strictly correct information vs more, possibly less accurate information	 
 - Perhaps have to consider other unit formattings in addition to only those containing (/ and %) i.e for the unit being time
+- A couple of recordings picked up from recommendations could be fixed via detecting lines that are recommendations rather than recordings
